@@ -1,11 +1,13 @@
 {
-  "name": "play-3",
+  "name": "play-4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
+    "help": "webpack --help",
+    "prod": "NODE_ENV=production npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +18,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.1.0",
     "css-loader": "^0.28.7",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",

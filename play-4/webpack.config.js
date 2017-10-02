@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const APP_FOLDER = path.resolve(__dirname, './src');
 const DIST_FOLDER = path.resolve(APP_FOLDER, './dist');
@@ -48,6 +49,10 @@ const config = {
       filename: '[name].bundle.css',
       allChunks: true,
     }),
+    new CopyWebpackPlugin([
+      { from: 'index.html', to: '.' },
+    ],
+    { debug: 'info' }),
   ],
 };
 
